@@ -6,26 +6,49 @@ section h1 {
   text-align: center;
 }
 
-#main-container{
-  display:flex;
-  justify-content: center;
-  padding: 1rem 0;
-
+.title{
+  animation-name: slidein;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  
+}
+.para{
+  animation-name: fadeout; 
+  animation-duration:10s;
+  animation-iteration-count: infinite;
+  
 }
 
-#face-container{
-  width: 400px;
-  height: auto;
-  text-align: center;
-  background-color: pink;
+@keyframes slidein{
+  0%{
+    margin-left: 95%;
+    font-family: arial;
+    font-size:150%;
+  }
+  
+  75%{
+    margin-left: 50%;
+    font-family: arial;
+    font-size: 300%;
+    color: blue; 
+  }
+  100%{
+    margin-left: 0%;
+    font-family:arial;
+    font-size: 450%;
+    color: red;  
+  }
+  
 }
-#happy-face{
-  width: 200px;
-  height: auto;
-}
-
-.translate{
-  transform: translate(120px, 75px);
-  transition-duration: 2s;
-  transition-delay: 3s;
+@keyframes fadeout{
+  from{
+    font-size: 75%;
+    color: red;
+    font-family: arial;
+  }
+  to{
+    font-size:200%;
+    color:blue;
+    font-family: arial;
+  }  
 }
